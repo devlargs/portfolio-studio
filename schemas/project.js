@@ -1,6 +1,6 @@
 export default {
   name: "project",
-  title: "Project",
+  title: "Projects",
   type: "document",
   fields: [
     {
@@ -33,6 +33,17 @@ export default {
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: "alt",
+          title: "Alternative Text",
+          type: "string",
+          options: {
+            isHighlighted: true,
+          },
+          validation: (Rule) => Rule.required(),
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {
