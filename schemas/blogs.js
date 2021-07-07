@@ -41,6 +41,15 @@ export default {
       ],
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: "banner",
+      title: "Banner",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule) => Rule.required(),
+    },
   ],
   preview: {
     select: {
