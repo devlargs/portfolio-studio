@@ -42,9 +42,13 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "bannerUrl",
       title: "Banner URL",
-      type: "string",
+      name: "bannerUrl",
+      type: "url",
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ["http", "https"],
+        }),
     },
   ],
   preview: {
